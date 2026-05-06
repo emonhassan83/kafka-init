@@ -7,7 +7,7 @@ async function init() {
   await admin.connect();
   console.log("Connected to Kafka");
 
-  console.log("Creating topic...");
+  console.log("Creating topic [rider-updates]...");
   await admin.createTopics({
     topics: [
       {
@@ -17,9 +17,9 @@ async function init() {
     ],
   });
 
-  console.log("topic created sucessfully");
+  console.log("topic created success [rider-updates]...");
 
-  console.log("Disconnecting from Kafka...");
+  console.log("Disconnecting admin...");
 
   await admin.disconnect();
 }
